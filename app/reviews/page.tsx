@@ -1,41 +1,43 @@
 import Link from 'next/link'
 
+const features = [
+  'Review request system (SMS/email templates + process)',
+  'Google Business Profile review monitoring',
+  'Reply templates and guidance',
+  'Simple monthly report on new reviews and rating trend',
+]
+
 export default function ReviewsPage() {
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-6 pb-16 pt-20 md:pt-28">
-        <p className="mb-4 text-sm font-medium tracking-wide text-white/50">UPSELL</p>
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Cartesia Reviews System</h1>
-        <p className="mt-6 max-w-2xl text-lg text-white/70">
-          A lightweight, high-leverage system that helps local businesses consistently earn more Google reviews and protect their map-pack position.
+      <section className="mx-auto max-w-6xl px-6 pb-16 pt-24 md:pt-28">
+        <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.15em] text-white/40">Upsell</p>
+        <h1 className="text-[2.5rem] font-semibold tracking-tight md:text-[3.25rem]">Reviews System</h1>
+        <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-white/55">
+          A lightweight system that helps clinics consistently earn more Google reviews and protect their map-pack position.
         </p>
 
         <div className="mt-10 flex flex-wrap items-end gap-6">
           <div>
-            <div className="text-4xl font-bold">$149<span className="text-lg text-white/50">/mo</span></div>
-            <div className="mt-1 text-sm text-white/50">Can be added to the Growth Engine or sold separately</div>
+            <div className="text-[2.75rem] font-semibold tracking-tight">$149<span className="text-[1rem] font-normal text-white/40">/mo</span></div>
+            <div className="mt-1 text-[13px] text-white/40">Add to Growth Engine or run separately</div>
           </div>
           <a
             href="mailto:abdiwork81@gmail.com?subject=Reviews%20System%20Inquiry"
-            className="btn-gradient rounded-full px-8 py-3.5 text-sm"
+            className="btn-primary rounded-full px-7 py-3 text-[14px]"
           >
             Inquire about Reviews
           </a>
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-white/[0.02]">
+      <section className="border-t border-white/8">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-2xl font-bold">What you get</h2>
-          <ul className="mt-8 space-y-4">
-            {[
-              'Review request system (SMS/email templates + process the client can run or Cartesia can support)',
-              'Google Business Profile review monitoring',
-              'Reply templates and guidance',
-              'Simple monthly report on new reviews and rating trend',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-white/80">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-orange" />
+          <h2 className="text-[1.35rem] font-semibold">What you get</h2>
+          <ul className="mt-8 space-y-3">
+            {features.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-[14px] text-white/70">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF8A00]" />
                 {item}
               </li>
             ))}
@@ -43,35 +45,35 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <h2 className="text-2xl font-bold">Why this matters</h2>
-        <p className="mt-4 max-w-2xl text-white/70">
-          Google reviews are one of the strongest local ranking and trust signals. Businesses that consistently generate them win more map-pack visibility and convert more high-intent searchers. Most owners know this but never install a reliable system. This offer fixes that.
-        </p>
-
-        <h2 className="mt-14 text-2xl font-bold">Delivery philosophy</h2>
-        <p className="mt-4 max-w-2xl text-white/70">
-          Kept deliberately light so margin stays healthy and the client can sustain the process. Not a full reputation management platform. Focused on consistent new reviews and clean monitoring.
-        </p>
+      <section className="border-t border-white/8">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="max-w-2xl">
+            <h2 className="text-[1.35rem] font-semibold">Why this matters for clinics</h2>
+            <p className="mt-4 text-[14px] leading-relaxed text-white/55">
+              Google reviews are one of the strongest local ranking and trust signals. Practices that consistently generate them win more map-pack visibility and convert more high-intent patients. Most owners know this but never install a reliable system.
+            </p>
+            <h2 className="mt-12 text-[1.35rem] font-semibold">Delivery philosophy</h2>
+            <p className="mt-4 text-[14px] leading-relaxed text-white/55">
+              Kept deliberately light so margin stays healthy and the practice can sustain the process. Not a full reputation management platform — focused on consistent new reviews and clean monitoring.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="border-t border-white/10">
+      <section className="border-t border-white/8">
         <div className="mx-auto max-w-6xl px-6 py-16 text-center">
-          <h2 className="text-2xl font-bold">Add it to the Growth Engine or start separately</h2>
-          <p className="mx-auto mt-4 max-w-lg text-white/60">
+          <h2 className="text-[1.5rem] font-semibold">Add it to the Growth Engine or start separately</h2>
+          <p className="mx-auto mt-3 max-w-md text-[14px] text-white/50">
             Email to discuss timing and fit.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
               href="mailto:abdiwork81@gmail.com?subject=Reviews%20System%20Inquiry"
-              className="btn-gradient rounded-full px-8 py-3.5 text-sm"
+              className="btn-primary rounded-full px-7 py-3 text-[14px]"
             >
               abdiwork81@gmail.com
             </a>
-            <Link
-              href="/growth-engine"
-              className="rounded-full border border-white/20 px-8 py-3.5 text-sm transition hover:border-white/40"
-            >
+            <Link href="/growth-engine" className="btn-secondary rounded-full px-7 py-3 text-[14px]">
               View Growth Engine
             </Link>
           </div>
