@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
+  --font-inter: 'Inter', system-ui, sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Simple gradient text */
 .gradient-text {
   background: linear-gradient(90deg, #FFD600 0%, #FF8A00 50%, #FF2D00 100%);
   -webkit-background-clip: text;
@@ -21,19 +20,36 @@ body {
   background-clip: text;
 }
 
-/* Gradient button */
-.btn-gradient {
+.btn-primary {
   background: linear-gradient(90deg, #FFD600 0%, #FF8A00 50%, #FF2D00 100%);
   color: #000;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease;
 }
 
-.btn-gradient:hover {
-  opacity: 0.9;
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
-/* Subtle border accent */
-.border-accent {
-  border-image: linear-gradient(90deg, #FFD600, #FF8A00, #FF2D00) 1;
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.04);
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(255,255,255,0.18);
 }
